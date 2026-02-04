@@ -10,18 +10,25 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@erpexo/components": "^3.0.0",
+    "@erpexo/hooks": "1.1.0",
+    "@erpexo/navigation": "^3.0.10",
+    "@erpexo/utils": "1.0.3",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
+    "@mui/icons-material": "^7.3.7",
     "@mui/material": "^7.3.7",
     "@reduxjs/toolkit": "^2.11.2",
+    "@types/js-cookie": "^3.0.6",
     "axios": "^1.13.4",
     "formik": "^2.4.9",
-    "@types/js-cookie": "^3.0.6",
     "js-cookie": "^3.0.5",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.13.0",
+    "sweetalert2": "^11.26.18",
+    "sweetalert2-react-content": "^5.1.1",
     "yup": "^1.7.1"
   },
   "devDependencies": {

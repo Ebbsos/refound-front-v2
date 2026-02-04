@@ -1,9 +1,9 @@
-export interface Role {
+ interface Role {
   id_role: number;
   name_py: string;
 }
 
-export interface User {
+ interface User {
   id_user: number;
   name: string;
   surname: string;
@@ -11,7 +11,7 @@ export interface User {
   roles: Role[];
 }
 
-export interface LoginResponse {
+ interface LoginResponse {
   user: User;
   token: string;
 }

@@ -1,0 +1,57 @@
+.layout-root {
+  height: 100vh;
+  background: #121212;
+  color: white;
+}
+
+.navbar {
+  height: 56px;
+  background: #181818;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  border-bottom: 1px solid #61eb1b;
+}
+
+.navbar-title {
+  font-weight: bold;
+  color: #61eb1b;
+}
+
+.layout-body {
+  display: flex;
+  height: calc(100vh - 56px);
+}
+
+.sidebar {
+  background: #0f0f0f;
+  transition: width 0.3s;
+  overflow: hidden;
+}
+
+.sidebar.open {
+  width: 220px;
+}
+
+.sidebar.closed {
+  width: 0;
+}
+
+.sidebar-item {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+}
+
+.sidebar-item.active {
+  background: rgba(97, 235, 27, 0.15);
+}
+
+.layout-content {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+}

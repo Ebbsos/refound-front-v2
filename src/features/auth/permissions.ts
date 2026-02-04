@@ -1,4 +1,3 @@
-import type { User } from "../../types/types";
 import { Roles } from "./roles";
 
 export const hasRole = (user: User | null, role: Roles): boolean => {

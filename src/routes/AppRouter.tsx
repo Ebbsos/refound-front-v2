@@ -1,26 +1,33 @@
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
 import { PrivateRoute } from "./PrivateRoute";
-import { LoginPage } from "../features/auth/pages/LoginPage";
-import { Roles } from "../features/auth/roles";
 import { RoleRoute } from "./RoleRoutes";
 
+import { LoginPage } from "../features/auth/pages/LoginPage";
+import { RefundVouchersPage } from "../features/refunds/pages/RefundVouchersPage";
+import { Roles } from "../features/auth/roles";
+import { Layout } from "../shared/layout/Layout";
 
 export const AppRouter = () => (
   <BrowserRouter>
     <Routes>
-      {/* Public */}
       <Route path="/login" element={<LoginPage />} />
 
-      {/* Private */}
       <Route element={<PrivateRoute />}>
-        {/* Role protected */}
-        <Route element={<RoleRoute allowedRoles={[Roles.DEVOLUCIONES]} />}>
-          <Route path="/" element={<LoginPage />} />
-          <Route path="/refunds" element={<LoginPage />} />
+        
+        <Route element={<Layout />}>
+          
+          <Route element={<RoleRoute allowedRoles={[Roles.DEVOLUCIONES]} />}>
+            <Route path="/" element={<RefundVouchersPage />} />
+            <Route path="/refunds" element={<RefundVouchersPage />} />
+          </Route>
+
         </Route>
       </Route>
 
-      <Route path="/unauthorized" element={<LoginPage />} />
+      <Route path="/unauthorized" element={<div style={{ color: "white" }}>No autorizado</div>} />
+
+      {/* fallback */}
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   </BrowserRouter>
 );

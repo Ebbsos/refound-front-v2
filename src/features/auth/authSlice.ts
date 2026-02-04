@@ -1,6 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { loginRequest } from "./authService";
-import type { User } from "../../types/types";
 import { TOKEN_COOKIE_NAME } from "./constants";
 import Cookies from "js-cookie";
 
