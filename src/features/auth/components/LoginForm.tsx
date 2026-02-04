@@ -62,9 +62,9 @@ export const LoginForm = () => {
               sx={{
                 mt: 3,
                 backgroundColor: "var(--primary-color)",
-                color: "#000",
+                color: "var(--dark-main)",
                 "&:hover": {
-                  backgroundColor: "var(--secondary-color)",
+                  backgroundColor: "var(--primary-color-dark)",
                 },
               }}
             >

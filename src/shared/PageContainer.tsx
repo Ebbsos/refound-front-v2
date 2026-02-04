@@ -26,7 +26,7 @@ export const PageContainer = ({ title, children, actions }: Props) => {
           }}
         >
           {title && (
-            <Typography variant="h5" sx={{ color: "white", fontWeight: 600 }}>
+            <Typography variant="h5" sx={{ color: "var(--text-primary)", fontWeight: 600 }}>
               {title}
             </Typography>
           )}
@@ -37,8 +37,8 @@ export const PageContainer = ({ title, children, actions }: Props) => {
 
       <Paper
         sx={{
-          backgroundColor: "#0f0f0f",
-          border: "1px solid #61eb1b",
+          backgroundColor: "var(--dark-bg)",
+          border: "1px solid var(--primary-color)",
           borderRadius: 2,
           padding: 2,
         }}

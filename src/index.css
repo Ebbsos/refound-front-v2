@@ -7,25 +7,64 @@
   color: #ffffff;
 }
 :root {
+  /* Primary - Verde Neon */
   --primary-color: #61eb1b;
+  --primary-color-light: rgba(97, 235, 27, 0.15);
+  --primary-color-lighter: rgba(97, 235, 27, 0.08);
+  --primary-color-dark: #50c515;
+  --navbar-bg: #121212;      
+  --sidebar-bg: #0b0b0b;    
+ /* 
+
+  /* Dark Backgrounds */
+  --dark-main: #000000;
+  --dark-bg: #0f0f0f;
+  --dark-bg-secondary: #121212;
+  --dark-bg-tertiary: #181818;
+  --dark-border: #1a1a1a;
+
+  /* Gray Scale */
+  --gray-darkest: #0b0f0a;
+  --gray-darker: #1a1a1a;
+  --gray-dark: #2a2a2a;
+  --gray-medium: #404040;
+  --gray-light: #e5f7ff;
+
+  /* Text Colors */
+  --text-primary: #ffffff;
+  --text-secondary: #e5f7ff;
+  --text-muted: #a0a0a0;
+
+  /* Status Colors */
+  --error-color: #d32f2f;
+  --error-red: #ce0000;
+  --success-color: #61eb1b;
+  --warning-color: #ff9800;
+  --info-color: #2196f3;
+
+  /* Scrollbar */
+  --scrollbar-track: #2a2a2a;
+  --scrollbar-thumb: #404040;
+  --scrollbar-thumb-hover: #505050;
+
+  /* Legacy aliases (deprecated) */
   --secondary-color: #50c515;
   --dark-contrast: #000000;
   --text-color: #ffffff;
   --ligth-color: #ffffff;
   --dark-color: #000000;
   --bg-color: #000000;
-  --error-color: #ce0000;
   --nav-color: #000000;
 }
 #root {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: var(--dark-main);
+  color: var(--text-primary);
   min-height: 100vh;
 }
 
 .App {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: var(--dark-main);
+  color: var(--text-primary);
 }
 
 ::-webkit-scrollbar {
@@ -34,19 +73,21 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #2a2a2a; 
-
+  background: var(--scrollbar-track);
 }
- 
+
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #404040; 
+  background: var(--scrollbar-thumb);
   border-radius: 10px;
-  border: 3px solid #2a2a2a;
+  border: 3px solid var(--scrollbar-track);
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
   transition: background 0.5s ease;
- height: 20vh;
-  
+  height: 20vh;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
 }
 
 /* Handle on hover */

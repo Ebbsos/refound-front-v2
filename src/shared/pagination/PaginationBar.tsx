@@ -1,10 +1,4 @@
-import {
-  Box,
-  IconButton,
-  MenuItem,
-  Select,
-  Typography,
-} from "@mui/material";
+import { Box, IconButton, MenuItem, Select, Typography } from "@mui/material";
 import {
   FirstPage,
   LastPage,
@@ -13,7 +7,7 @@ import {
 } from "@mui/icons-material";
 
 interface Props {
-  page: number;            
+  page: number;
   rowsPerPage: number;
   total: number;
   onPageChange: (page: number) => void;
@@ -42,13 +36,11 @@ export const PaginationBar = ({
         justifyContent: "flex-end",
         gap: 2,
         mt: 2,
-        color: "#61eb1b",
+        color: "var(--primary-color)",
       }}
     >
       {/* Filas por página */}
-      <Typography sx={{ fontSize: 14 }}>
-        Filas por página
-      </Typography>
+      <Typography sx={{ fontSize: 14 }}>Filas por página</Typography>
 
       <Select
         size="small"
@@ -58,10 +50,24 @@ export const PaginationBar = ({
           onPageChange(1); // reset a página 1
         }}
         sx={{
-          color: "#61eb1b",
-          borderColor: "#61eb1b",
+          color: "var(--primary-color)",
+          backgroundColor: "var(--dark-bg)",
+          borderColor: "var(--primary-color)",
           ".MuiOutlinedInput-notchedOutline": {
-            borderColor: "#61eb1b",
+            borderColor: "var(--primary-color)",
+          },
+        }}
+        MenuProps={{
+          PaperProps: {
+            sx: {
+              backgroundColor: "var(--dark-bg)",
+              "& .MuiMenuItem-root": {
+                color: "var(--primary-color)",
+                "&:hover": {
+                  backgroundColor: "rgba(255, 255, 255, 0.1)",
+                },
+              },
+            },
           },
         }}
       >
