@@ -1,5 +1,13 @@
-function App() {
-  return <h1>Refunds App</h1>;
-}
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { Provider } from "react-redux";
+import { store } from "./app/store";
+import { AppRouter } from "./routes/AppRouter";
 
-export default App;
+ReactDOM.createRoot(document.getElementById("root")!).render(
+  <React.StrictMode>
+    <Provider store={store}>
+      <AppRouter />;
+    </Provider>
+  </React.StrictMode>,
+);
